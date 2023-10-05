@@ -1,45 +1,48 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/* create the multiple element */
-const parent = React.createElement( 'div', { id:"parent" }, [
-        React.createElement(
-            'div', { id : "child" }, [ 
-                React.createElement('h1', {}, "This is Namaste React 🚀" ), 
-                React.createElement('h2', {}, "I am inside H2 Tag") 
-            ]
-        ),
-        React.createElement(
-            'div', { id : "child2" }, [ 
-                React.createElement('h1', {}, "I am H1 Tag" ), 
-                React.createElement('h2', {}, "I am inside H2 Tag") 
-            ]
-        ),
-        React.createElement(
-            'div', { id : "child23" }, [ 
-                React.createElement('p', {}, React.createElement('span',{}, 'I am inside span') ) 
-            ]
-        ),
-        React.createElement(
-            'a', { id : "pantherschools", href: "https://www.pantherschools.com", target: "_blank" }, 'pantherschools website'
-        )
-    ]
-);
+const elem = <span>React Element</span>
+const heading = <span> {elem} with caps!</span>
+const number = 20903;
+const JsxHeading = () => ( 
+    <div id="container">
+        <h1>
+            {number + 3430}
+            {console.log(number)} <br/>
+            {heading}
+        </h1>
+        <h1 id="heading" className="heading">
+            This is a Namaste React using JSX 🚀
+        </h1>
+    </div>
+)
 
-/* Create a Single Element */
-const heading  = React.createElement(
-"h1",
-{
-    id: "heading",
-    className: "heading",
-    syxz: "true"
-}, 
-"Hello World from React!!"
-);
-console.log(parent); // object
+const HeadingComponent1 = () => <h1>This is a single line heading </h1>;
+const MYClass = () => <a href="https://www.pantherschools.com" target="_blank"><h1>Signup</h1></a>;
+
+// Component Coposition
+const HeadingComponent = () =>{
+    return(
+        <div id="parent-container">
+            {JsxHeading()}
+            <JsxHeading/>
+            <JsxHeading></JsxHeading>
+            <HeadingComponent1>
+            </HeadingComponent1>
+            <MYClass></MYClass>
+            <h1 id="heading" className="heading">
+                Namaste React functional Components
+            </h1>
+        </div>
+    )
+}
+
+const title = (
+    <div id="container-component" tabIndex="Hello">
+        <h1>Namaste React by Akshay Saini 🚀</h1>
+        <HeadingComponent></HeadingComponent>
+    </div>
+)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-/**
-* Render(Object): Convert the object into the DOM structure that browsers understands
-*/
+root.render(title);

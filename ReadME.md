@@ -76,6 +76,26 @@
     - `parcel` is the name of the package that we wanted to execute
     - `index.html` is the name of the main file
 
+# Day3 Learnings
+- `npm start` is equal to `npm run start`
+- `npm run start` with use `parcel index.html` because we have added the same in `package.json`
+- JSX is not part of React
+- JSX is a JavaScript syntax to develop react elements
+- JSX is not HTML in JavaScript, it is a HTML/XML like syntax
+- JSX Code (transpiled before it reached to JavaScript) - Job done by Parcel --> Babel
+- JSX Code --> Bable --> React.createElement --> React Element --> JavaScript Object --> JavaScript Engine
+- JSX is converted to React.createElement by Bable and then JS Engine can understand it
+- To give the attribute in JSX we need to use camel case.
+- Everything in React is a React component
+    - Class based Component
+    - Function based component
+        - It is a normal JavaScript function that returns the JSX Syntax or React Element
+- React Element - any JSX syntax is a React Element
+- {} - withing {} we can weite any JavaScript syntax
+- JSX takes care of CrossSiteScript injection attacks
+
+# Day4 Learnings
+
 ## Video Progress Tracker
 
 - [x] Day1
