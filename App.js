@@ -1,36 +1,69 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const elem = <span>React Element</span>
-const heading = <span> {elem} with caps!</span>
-const number = 20903;
-const JsxHeading = () => ( 
-    <div id="container">
-        <h1>
-            {number + 3430}
-            {console.log(number)} <br/>
-            {heading}
-        </h1>
-        <h1 id="heading" className="heading">
-            This is a Namaste React using JSX 🚀
-        </h1>
-    </div>
-)
+/**
+ * Header
+ *  - Logo Component
+ *  - Nav Items Component
+ * Body Component
+ *  - Search Component
+ *  - Restaurent Container Component
+ *     - RestaurentCard Component
+ * Footer Component
+ *  - Copyright Component
+ *  - LinkComponent Component
+ *  - Contact
+ *  - Address Component
+ * 
+ */
 
-const HeadingComponent1 = () => <h1>This is a single line heading </h1>;
-const MYClass = () => <a href="https://www.pantherschools.com" target="_blank"><h1>Signup</h1></a>;
 
+const HeaderComponent = () =>{
+    return(
+        <div id="header" className="header" >
+            <div>
+                <img src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png" />
+            </div>
+            <div className="navItem">
+                <ul>
+                    <li>Home</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Help</li>
+                    <li>Cart</li>
+                    <li>Signup/Login</li>
+                </ul>
+            </div>
+        </div>
+    );
+}
+
+const FooterComponent = () =>{
+    return(
+        <div id="footer-container">
+            
+        </div>
+    );
+}
+
+const AppLayout = () => {
+    return (
+        <div id="app-layout" className="app-layout">
+
+            <HeaderComponent></HeaderComponent>
+
+            <FooterComponent></FooterComponent>
+
+        </div>
+    )
+}
+
+/*
 // Component Coposition
 const HeadingComponent = () =>{
     return(
         <div id="parent-container">
-            {JsxHeading()}
-            <JsxHeading/>
-            <JsxHeading></JsxHeading>
-            <HeadingComponent1>
-            </HeadingComponent1>
-            <MYClass></MYClass>
-            <h1 id="heading" className="heading">
+            <h1 id="heading" >
                 Namaste React functional Components
             </h1>
         </div>
@@ -43,6 +76,6 @@ const title = (
         <HeadingComponent></HeadingComponent>
     </div>
 )
-
+*/
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(title);
+root.render(<AppLayout></AppLayout>);

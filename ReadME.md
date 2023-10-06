@@ -96,11 +96,25 @@
 
 # Day4 Learnings
 
+## Food Delivery Application
+- Before starting any project planning is very important
+- If we want to pass the dynamic property into the React component we will prop 
+- React functional component will accept a function argument named as props or can be any name 
+- Props can also be deconstructed by using JavaScript concepts like { resName, cuisine }
+- prop is nothing it's just a JavaScript object
+- Config driven UI - UI changes based on the config/data coming from the backend
+- While using JavaScript map function inside JSX then it is very important to pass the key element
+- Always try to use unique Id as key if you do not have id use index as key but there should be a unique key 
+
 ## Video Progress Tracker
 
 - [x] Day1
-- [ ] Day2
+- [x] Day2
+- [ ] Day3
+- [ ] Day4
 
 ## Assignment Progress Tracker
 - [ ] Day1
 - [ ] Day2
+- [ ] Day3
+- [ ] Day4
